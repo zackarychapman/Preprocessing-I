@@ -105,7 +105,11 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  margin: 40px;
+}
+p {
+  line-height: 1.5;
+  margin-top: 10px;
 }
 ol,
 ul {
@@ -133,4 +137,67 @@ table {
 html,
 body {
   height: 100%;
+  line-height: normal;
+}
+header {
+  background: white;
+  border: 2px grey solid;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  text-align: center;
+  display: inline-block;
+  margin-top: 15px;
+}
+img {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+}
+h1 {
+  font-size: xx-large;
+  font-family: fantasy;
+  margin-top: 20px;
+}
+h2 {
+  font-size: 35px;
+}
+div {
+  border: black 1px solid;
+  background: #989e8e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: 3;
+}
+.contact-section {
+  border: black 1px solid;
+  background: #989e8e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: 3;
+}
+footer {
+  border: black 1px solid;
+  background: #989e8e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: 3;
+}
+.format-boxes {
+  border: black 1px solid;
+  background: #989e8e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: 3;
 }
