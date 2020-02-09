@@ -104,8 +104,12 @@ nav,
 section {
   display: block;
 }
+.container {
+  background: black;
+}
 body {
   margin: 40px;
+  background: white;
 }
 p {
   line-height: 1.5;
@@ -139,32 +143,103 @@ body {
   height: 100%;
   line-height: normal;
 }
-header {
-  background: white;
-  border: 2px grey solid;
-  margin-bottom: 50px;
+.display-setting {
   display: flex;
-  flex-wrap: wrap;
-  padding: 50px;
 }
-nav a {
-  text-decoration: none;
-  color: black;
+.header-position {
+  display: inline-block;
 }
-button {
+.border-style {
+  border: red 2 px solid;
+}
+.content-position {
+  margin: 15%;
+  padding: 30px;
+  line-height: 2.5px;
+}
+.content-position p {
+  padding: 30px;
+  display: inline-block;
+}
+.content-position img {
+  display: inline-block;
+  border: red 2 px solid;
+}
+header {
+  background: #ff7d04;
+  color: white;
+  border: red 2 px solid;
+  margin: 15%;
+  padding: 30px;
+  line-height: 2.5px;
+  display: inline-block;
+}
+header p {
+  padding: 30px;
+  display: inline-block;
+}
+header img {
+  display: inline-block;
+  border: red 2 px solid;
+}
+header h1 {
+  font-size: xx-large;
+  font-family: fantasy;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-flex;
+}
+header .header-display {
+  display: inline-block;
+  background: black;
+}
+header button {
   text-align: center;
   display: inline-block;
   margin-top: 15px;
 }
-img {
-  height: 200px;
-  width: 200px;
+header img {
+  height: 400px;
+  width: 400px;
   display: inline-block;
+  border: 15px darkslategrey dashed;
 }
-h1 {
-  font-size: xx-large;
-  font-family: fantasy;
-  margin-top: 20px;
+nav {
+  display: inline-block;
+  border: red 5px solid;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 100;
+  justify-content: right;
+  padding: 30px;
+  display: flex;
+  text-align: center;
+}
+nav a:nth-child(1) {
+  margin: 20px;
+  background: red;
+  width: 130px;
+}
+nav a:nth-child(2) {
+  margin: 20px;
+  margin-left: 100px;
+  background: #3b2870;
+}
+nav a:nth-child(3) {
+  margin: 20px;
+  width: 130px;
+  background: #a32f55;
+}
+nav a:nth-child(4) {
+  margin: 20px;
+  margin-left: 100px;
+  background: #2640b3;
 }
 h2 {
   font-size: 35px;
@@ -200,4 +275,12 @@ footer {
   margin-bottom: 20px;
   padding: 20px;
   line-height: 3;
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 100;
+    justify-content: center;
+  }
 }

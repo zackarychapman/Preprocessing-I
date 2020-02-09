@@ -29,8 +29,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+.container{
+	background: black;
+}
 body {
 	margin:40px;
+	background:white;
 }
 p{
 	line-height: 1.5;
@@ -62,35 +66,117 @@ html, body {
 	height: 100%;
 	line-height: normal;
 }
+//general settings
+@margin-settings:15%;
+@padding-settings:30px;
+@line-height:2.5px;
+@imj:400px;
+@nav-pop:100px;
+@nav-box-width:130px;
+
+.display-setting{
+	display:flex;
+}
+//general styles
+@background: rgb(255, 125, 4);
+@text-color:white;
+@border-color:rgb(119, 235, 42);
+//header blocks settings
+.header-position{
+	display:inline-block;
+}
+//border settings
+.border-style{
+	border: red 2 px solid;
+}
+//paragraph/ all text settings
+.content-position{
+	margin:@margin-settings;
+	padding:@padding-settings;
+	line-height:@line-height;
+	p{
+		padding:@padding-settings;
+		display:inline-block;
+	}
+	img{
+		display:inline-block;
+		.border-style();
+	}
+	
+}
+
+
 header{
-	background:white;
-	border:2px grey solid;
-	margin-bottom:50px;
-	display: flex;  
-	flex-wrap: wrap;
-	padding: 50px;
+	background:@background;
+	color:@text-color;
+	.border-style();
+	.content-position();
+	.header-position();
+	h1{
+		font-size: xx-large;
+		font-family: fantasy;
+		margin-top:20px;
+		text-align: center;
+		display: inline-flex;
+	}
+	.header-display{
+		.header-position();
+		background: black;
+	}
+	button{
+		text-align:center;
+		display:inline-block;
+		margin-top:15px;
+	}
+	img{
+		height:@imj;
+		width:@imj;
+		display: inline-block;
+		border: 15px darkslategrey dashed;
+	}
+	
+}
+nav{
+	display:inline-block;
+	border: red 5px solid;
 }
 nav a{
 	text-decoration:none;
-	color:black;
-	
+	color:white;
+	font-size: large;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	flex-direction: column;
+	flex-wrap: wrap;
+	z-index: 100;
+	justify-content: right;
+	padding:@padding-settings;
+	display: flex;
+	text-align: center;
+
+	}
+
+nav a:nth-child(1){
+	margin:20px;
+	background: red;
+	width:@nav-box-width;
 }
-button{
-	text-align:center;
-	display:inline-block;
-	margin-top:15px;
+nav a:nth-child(2){
+	margin:20px;
+	margin-left: @nav-pop;
+	background: rgb(59, 40, 112);
 }
-img{
-	height:200px;
-	width:200px;
-	display: inline-block;
+nav a:nth-child(3){
+	margin:20px;
+	width:@nav-box-width;
+	background: rgb(163, 47, 85);
+}
+nav a:nth-child(4){
+	margin:20px;
+	margin-left: @nav-pop;
+	background: rgb(38, 64, 179);
 }
 
-h1{
-	font-size: xx-large;
-	font-family: fantasy;
-	margin-top:20px;
-}
+
 
 h2{
 	font-size:35px;
@@ -127,3 +213,15 @@ footer{
     padding:20px;
     line-height: 3;
 }
+
+@media (@mobile) {
+    nav {
+        // .flex100();
+        flex-direction: row;
+        flex-wrap: wrap;
+        z-index: 100;
+        justify-content: center;
+    }
+}
+
+@mobile: ~"max-width: 500px";
