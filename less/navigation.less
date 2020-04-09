@@ -1,0 +1,61 @@
+//Navigation code below
+
+.imgandnavs{
+    display:flex;
+    width:100%;
+    
+}
+
+
+nav{
+    border: green 5px solid;
+    width:48%;
+    flex-direction: column;
+	flex-wrap: wrap;
+}
+
+nav a{
+	text-decoration:none;
+	color:red;
+	font-size: large;//this does this
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	z-index: 100;
+	justify-content: right;
+	padding:@padding-settings;
+    text-align: center;
+
+	}	
+
+
+
+nav a:nth-child(1){
+	margin:20px;
+	background: red;
+	width:@nav-box-width;
+}
+nav a:nth-child(2){
+	margin:20px;
+	margin-left: @nav-pop;
+	background: rgb(59, 40, 112);
+}
+nav a:nth-child(3){
+	margin:20px;
+	width:@nav-box-width;
+	background: rgb(163, 47, 85);
+}
+nav a:nth-child(4){
+	margin:20px;
+	margin-left: @nav-pop;
+	background: rgb(38, 64, 179);
+}
+
+
+@media (@mobile) {
+    nav {
+        // .flex100();
+        flex-direction: row;
+        flex-wrap: wrap;
+        z-index: 100;
+        justify-content: center;
+    }
+}

@@ -143,12 +143,6 @@ body {
   height: 100%;
   line-height: normal;
 }
-.display-setting {
-  display: flex;
-}
-.header-position {
-  display: inline-block;
-}
 .border-style {
   border: red 2 px solid;
 }
@@ -159,10 +153,8 @@ body {
 }
 .content-position p {
   padding: 30px;
-  display: inline-block;
 }
 .content-position img {
-  display: inline-block;
   border: red 2 px solid;
 }
 header {
@@ -172,14 +164,11 @@ header {
   margin: 15%;
   padding: 30px;
   line-height: 2.5px;
-  display: inline-block;
 }
 header p {
   padding: 30px;
-  display: inline-block;
 }
 header img {
-  display: inline-block;
   border: red 2 px solid;
 }
 header h1 {
@@ -187,26 +176,21 @@ header h1 {
   font-family: fantasy;
   margin-top: 20px;
   text-align: center;
-  display: inline-flex;
 }
 header .header-display {
-  display: inline-block;
   background: black;
 }
 header button {
   text-align: center;
-  display: inline-block;
   margin-top: 15px;
 }
 header img {
   height: 400px;
   width: 400px;
-  display: inline-block;
   border: 15px darkslategrey dashed;
 }
 nav {
-  display: inline-block;
-  border: red 5px solid;
+  border: blue 5px solid;
 }
 nav a {
   text-decoration: none;
@@ -220,6 +204,9 @@ nav a {
   padding: 30px;
   display: flex;
   text-align: center;
+}
+.imgandnavs {
+  display: flex;
 }
 nav a:nth-child(1) {
   margin: 20px;
